@@ -73,7 +73,7 @@ WSGI_APPLICATION = 'poc.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 DATABASES = {
     'default': dj_database_url.config(
-        default='postgres://pollsdb_user:sdxTJoqju1aDSw4CiWXCVW8Qvsq5gq0G@dpg-ca15k9v5f99ar466jirg-a.oregon-postgres.render.com/pollsdb',
+        default=os.getenv('db'),
         conn_max_age=600
     )
 }
