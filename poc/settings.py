@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-z%7^9@hec*pmvgkn_n7x2*%@j%wp@3nh)wc93r_6xn711vg=v!'
 DEBUG = False
-ALLOWED_HOSTS = ['.onrender.com']
+ALLOWED_HOSTS = ['localhost', '.onrender.com']
 CSRF_TRUSTED_ORIGINS=['https://*.onrender.com']
 
 
