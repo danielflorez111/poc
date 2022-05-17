@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 SECRET_KEY = 'django-insecure-z%7^9@hec*pmvgkn_n7x2*%@j%wp@3nh)wc93r_6xn711vg=v!'
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ['poc-b0cf.onrender.com']
 
 # SECRET_KEY = os.environ.get("SECRET_KEY")
