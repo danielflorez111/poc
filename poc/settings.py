@@ -22,12 +22,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-z%7^9@hec*pmvgkn_n7x2*%@j%wp@3nh)wc93r_6xn711vg=v!'
 DEBUG = False
-ALLOWED_HOSTS = ['poc-b0cf.onrender.com']
-CSRF_TRUSTED_ORIGINS=['https://poc-b0cf.onrender.com']
+ALLOWED_HOSTS = ['localhost', '.onrender.com']
+CSRF_TRUSTED_ORIGINS=['https://*.onrender.com']
 
-# SECRET_KEY = os.environ.get("SECRET_KEY")
-# DEBUG = int(os.environ.get("DEBUG", default=0))
-# ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
 
 # Application definition
 
