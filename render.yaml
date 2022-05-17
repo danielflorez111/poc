@@ -4,3 +4,6 @@ services:
     env: docker
     dockerCommand: python manage.py runserver 0.0.0.0:8000
     pullRequestPreviewsEnabled: true
+
+databases:
+  - name: pocdb
