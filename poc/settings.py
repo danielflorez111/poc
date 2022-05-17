@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-z%7^9@hec*pmvgkn_n7x2*%@j%wp@3nh)wc93r_6xn711vg=v!'
 DEBUG = True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['poc-b0cf.onrender.com']
 
 # SECRET_KEY = os.environ.get("SECRET_KEY")
 # DEBUG = int(os.environ.get("DEBUG", default=0))
