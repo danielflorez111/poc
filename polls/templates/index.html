@@ -1,0 +1,6 @@
+<h1>Pipeline POC using Render</h1>
+
+<form action="{% url 'task' %}" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Create task">
+</form>
