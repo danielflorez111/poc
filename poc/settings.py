@@ -21,9 +21,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 SECRET_KEY = 'django-insecure-z%7^9@hec*pmvgkn_n7x2*%@j%wp@3nh)wc93r_6xn711vg=v!'
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = ['localhost', '.onrender.com']
-CSRF_TRUSTED_ORIGINS=['https://*.onrender.com']
+CSRF_TRUSTED_ORIGINS=['http://localhost:8000', 'https://*.onrender.com']
 
 
 # Application definition
@@ -73,6 +73,7 @@ WSGI_APPLICATION = 'poc.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 DATABASES = {
     'default': dj_database_url.config(
+        engine='django.db.backends.postgresql',
         default=os.getenv('DB_URL'),
         conn_max_age=600
     )
