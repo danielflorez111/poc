@@ -22,6 +22,7 @@ services:
           property: connectionString
   - type: worker
     name: queue
+    env: docker
     dockerCommand: ./worker.sh
     envVars:
       - key: REDIS_HOST
