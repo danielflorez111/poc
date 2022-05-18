@@ -2,4 +2,4 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("Pipeline POC using Render - Test preview 4")
+    return HttpResponse("Pipeline POC using Render")
