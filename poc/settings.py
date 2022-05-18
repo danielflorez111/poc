@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'poc.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.getenv('DB_URL', 'postgres://pocdb_ddmv_user:XkuLPiOZlBhqJRMS1Dz7V4afuNpjUvvQ@dpg-ca1q9tsgqg4f5uhmgtn0-a.oregon-postgres.render.com/pocdb_ddmv'),
+        default=DB_URL,
         conn_max_age=600
     )
 }
@@ -133,8 +133,8 @@ Q_CLUSTER = {
     'queue_limit': 500,
     'label': 'Django Q',
     'redis': {
-        'host': 'red-ca2b5v3vog4qkp5beb60',
-        'port': 6379,
+        'host': REDIS_HOST,
+        'port': REDIS_PORT,
         'db': 0, 
     }
 }
