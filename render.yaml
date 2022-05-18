@@ -5,7 +5,24 @@ services:
     name: poc
     env: docker
     dockerCommand: ./entrypoint.sh
-    pullRequestPreviewsEnabled: true
+    envVars:
+      - key: REDIS_HOST
+        fromService:
+          type: redis
+          name: pocredis
+          property: host
+      - key: REDIS_PORT
+        fromService:
+          type: redis
+          name: pocredis
+          property: port
+      - key: DB_URL
+        fromDatabase:
+          name: pocdb
+          property: connectionString
+  - type: worker
+    name: queue
+    dockerCommand: ./worker.sh
     envVars:
       - key: REDIS_HOST
         fromService:
