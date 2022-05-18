@@ -4,16 +4,23 @@ services:
   - type: web
     name: poc
     env: docker
-    # dockerCommand: python manage.py runserver 0.0.0.0:8000
     dockerCommand: ./entrypoint.sh
     pullRequestPreviewsEnabled: true
     envVars:
+      - key: REDIS_HOST
+        fromService:
+          type: redis
+          name: pocredis
+          property: host
+      - key: REDIS_PORT
+        fromService:
+          type: redis
+          name: pocredis
+          property: port
       - key: DB_URL
         fromDatabase:
           name: pocdb
           property: connectionString
-      - key: TEST
-        value: 999
   - type: redis
     name: pocredis
     ipAllowList:

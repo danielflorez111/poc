@@ -16,6 +16,9 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+DB_URL = os.getenv('DB_URL', 'postgres://pocdb_ddmv_user:XkuLPiOZlBhqJRMS1Dz7V4afuNpjUvvQ@dpg-ca1q9tsgqg4f5uhmgtn0-a.oregon-postgres.render.com/pocdb_ddmv')
+REDIS_HOST = os.getenv('REDIS_HOST', 'red-ca2b5v3vog4qkp5beb60')
+REDIS_PORT = os.getenv('REDIS_PORT', 6379)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
@@ -24,7 +27,6 @@ SECRET_KEY = 'django-insecure-z%7^9@hec*pmvgkn_n7x2*%@j%wp@3nh)wc93r_6xn711vg=v!
 DEBUG = True
 ALLOWED_HOSTS = ['localhost', '.onrender.com']
 CSRF_TRUSTED_ORIGINS=['http://localhost:8000', 'https://*.onrender.com']
-
 
 # Application definition
 
@@ -136,3 +138,6 @@ Q_CLUSTER = {
         'db': 0, 
     }
 }
+
+
+
