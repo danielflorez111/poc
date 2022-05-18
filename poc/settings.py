@@ -73,8 +73,7 @@ WSGI_APPLICATION = 'poc.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 DATABASES = {
     'default': dj_database_url.config(
-        engine='django.db.backends.postgresql',
-        default=os.getenv('DB_URL'),
+        default=os.getenv('DB_URL', 'postgres://pocdb_ddmv_user:XkuLPiOZlBhqJRMS1Dz7V4afuNpjUvvQ@dpg-ca1q9tsgqg4f5uhmgtn0-a.oregon-postgres.render.com/pocdb_ddmv'),
         conn_max_age=600
     )
 }
